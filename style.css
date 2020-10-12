@@ -1,0 +1,107 @@
+body {
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    grid-template-areas:
+        "head"
+        "three"
+        "two"
+        "one";
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background-color: rgb(0, 180, 156);
+    grid-area: head;
+}
+
+.columnOne {
+    grid-area: one;
+    background-color: rgb(41, 41, 41);
+    padding: 15%;
+}
+
+.columnTwo {
+    grid-area: two;
+    background-color: rgb(41, 41, 41);
+    padding: 15%;
+}
+
+.columnThree {
+    grid-area: three;
+    background-color: rgb(41, 41, 41);
+    padding: 15%;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: white;
+}
+
+p {
+    color: white;
+    font-size: 16px;
+}
+
+.tileOne {
+    margin: 0 auto;
+    margin-top: 25px;
+    height: 30px;
+    width: 200px;
+    background-color: rgb(0, 162, 255)
+}
+
+.tileTwo {
+    margin: 0 auto;
+    margin-top: 25px;
+    height: 30px;
+    width: 200px;
+    background-color: orangered;
+}
+
+.tileThree {
+    margin: 0 auto;
+    margin-top: 25px;
+    height: 30px;
+    width: 200px;
+    background-color: rgb(0, 180, 156);
+}
+
+@media (min-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr, 1fr, 1fr;
+        grid-template-areas:
+        "head head"
+        "one two"
+        "three";
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr, 1fr;
+        grid-template-areas:
+        "head head head"
+        "one two three";
+    }
+}
